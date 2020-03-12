@@ -9,8 +9,7 @@ namespace Exam.Tests
         public void Test1()
         {
             var date = new DateTime(2010,1,1) ;
-            var item = new TodoItem(date, "ça");
-            TodoItem.DateProvider = new DateTime(2010,1,2);
+            var item = new TodoItem(date, "ça", new TestClock(new DateTime(2010,1,2)));
 
             Assert.Same(item.Age.Days, 1);
         }

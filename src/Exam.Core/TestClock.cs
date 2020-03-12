@@ -10,6 +10,6 @@ public class TestClock : IClock
     }
     public DateTime Now()
     {
-        throw new NotImplementedException();
+        return date;
     }
 }
